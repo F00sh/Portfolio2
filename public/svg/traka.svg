@@ -4,6 +4,7 @@
 	 viewBox="0 0 1024 70" style="enable-background:new 0 0 1024 70;" xml:space="preserve">
 <style type="text/css">
 	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:#FF6941;}
 </style>
 <g>
 	<defs>
@@ -14,40 +15,40 @@
 	</clipPath>
 	<g class="st0">
 		<g>
-			<polygon points="527.4,-1 467.2,-1 393.6,71 453.9,71 			"/>
+			<polygon class="st1" points="527.4,0 467.2,0 393.6,70 453.9,70 			"/>
 		</g>
 		<g>
-			<polygon points="221,-1 160.7,-1 87.2,71 147.5,71 			"/>
+			<polygon class="st1" points="221,0 160.7,0 87.2,70 147.5,70 			"/>
 		</g>
 		<g>
-			<polygon points="425.3,-1 365,-1 291.5,71 351.7,71 			"/>
+			<polygon class="st1" points="425.3,0 365,0 291.5,70 351.7,70 			"/>
 		</g>
 		<g>
-			<polygon points="629.6,-1 569.3,-1 495.8,71 556,71 			"/>
+			<polygon class="st1" points="629.6,0 569.3,0 495.8,70 556,70 			"/>
 		</g>
 		<g>
-			<polygon points="323.1,-1 262.9,-1 189.3,71 249.6,71 			"/>
+			<polygon class="st1" points="323.1,0 262.9,0 189.3,70 249.6,70 			"/>
 		</g>
 		<g>
-			<polygon points="-15,71 45.3,71 118.8,-1 58.6,-1 			"/>
+			<polygon class="st1" points="-15,70 45.3,70 118.8,0 58.6,0 			"/>
 		</g>
 		<g>
-			<polygon points="731.7,-1 671.5,-1 597.9,71 658.2,71 			"/>
+			<polygon class="st1" points="731.7,0 671.5,0 597.9,70 658.2,70 			"/>
 		</g>
 		<g>
-			<polygon points="833.9,-1 773.6,-1 700.1,71 760.3,71 			"/>
+			<polygon class="st1" points="833.9,0 773.6,0 700.1,70 760.3,70 			"/>
 		</g>
 		<g>
-			<polygon points="16.7,-1 -57,-1 -57,71 -56.8,71 			"/>
+			<polygon class="st1" points="16.7,0 -57,0 -57,70 -56.8,70 			"/>
 		</g>
 		<g>
-			<polygon points="1006.5,71 1081,71 1081,-1 1080.1,-1 			"/>
+			<polygon class="st1" points="1006.5,70 1081,70 1081,0 1080.1,0 			"/>
 		</g>
 		<g>
-			<polygon points="1038.2,-1 977.9,-1 904.4,71 964.6,71 			"/>
+			<polygon class="st1" points="1038.2,0 977.9,0 904.4,70 964.6,70 			"/>
 		</g>
 		<g>
-			<polygon points="936,-1 875.8,-1 802.2,71 862.5,71 			"/>
+			<polygon class="st1" points="936,0 875.8,0 802.2,70 862.5,70 			"/>
 		</g>
 	</g>
 </g>
