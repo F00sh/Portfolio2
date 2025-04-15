@@ -1,10 +1,25 @@
 <template>
-    <div class="group w-64 h-64 relative perspective font-oxanium cursor-none">
-      <!-- Flipping element -->
+    <!-- 
+      Conditionally apply "group" only if we're not on mobile, so that 
+      hover-based flipping works in desktop mode. 
+      Conversely, on mobile, we remove hover styling and set a cursor if desired.
+    -->
+    <div
+      :class="[
+        'relative w-64 h-64 perspective font-oxanium',
+        isMobile ? 'hover:cursor-default' : 'group hover:cursor-pointer'
+      ]"
+    >
+      <!-- The flipping element -->
       <div
         class="relative w-full h-full rounded-xl
                transition-transform duration-500 [transform-style:preserve-3d]"
-        :class="isFlipped ? 'rotate-y-180' : ''"
+        :class="[
+          // On desktop, flip on hover
+          !isMobile ? 'group-hover:rotate-y-180' : '',
+          // On mobile, flip via interval
+          isMobile && isFlipped ? 'rotate-y-180' : ''
+        ]"
       >
         <!-- FRONT SIDE -->
         <div
@@ -30,16 +45,20 @@
   <script setup lang="ts">
   import { ref, onMounted } from 'vue'
   
-  const isFlipped = ref(false)
-  
-  // Customize the breakpoint (e.g., 768 for tablet, 640 for mobile, etc.)
   const MOBILE_BREAKPOINT = 640
   
+  // Detect if we're in mobile
+  const isMobile = ref(false)
+  
+  // For mobile auto-flip
+  const isFlipped = ref(false)
+  
   onMounted(() => {
-    // Detect if current width is below the mobile breakpoint
-    const isMobile = window.innerWidth < MOBILE_BREAKPOINT
-    if (isMobile) {
-      // Toggle every 3 seconds
+    // Check viewport width
+    isMobile.value = window.innerWidth < MOBILE_BREAKPOINT
+  
+    // If mobile, flip automatically every 3s
+    if (isMobile.value) {
       setInterval(() => {
         isFlipped.value = !isFlipped.value
       }, 3000)
