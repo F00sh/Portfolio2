@@ -1,67 +1,126 @@
 <template>
-    <div class="fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out"
-    :class="{ '-translate-y-full': isScrollingDown, 'translate-y-0': !isScrollingDown }">
-        <ul class="flex justify-around items-center text-my-orange-normal uppercase tracking-[0.1rem] p-4 m-auto mt-10 w-full h-16 font-sarpanch">
-            <li class=
-               "absolute lg:left-180 left-10
-                hover:cursor-pointer
-                hover:tracking-[0.3rem]
-                duration-150
-                hover:text-my-orange-light">
-                about me
-            </li>
-            <li class=
-               "absolute
-                hover:cursor-pointer
-                hover:tracking-[0.3rem]
-                duration-150
-                hover:text-my-orange-light">
-                portfolio
-            </li>
-            <li class=
-               "absolute lg:right-180 right-10
-                hover:cursor-pointer
-                hover:tracking-[0.3rem]
-                duration-150
-                hover:text-my-orange-light">
-                contact
-            </li>
+    <!-- NAV CONTAINER: slides in/out based on scroll direction -->
+    <nav
+      class="fixed top-0 left-0 w-screen transition-transform duration-300 ease-in-out z-50"
+      :class="{ '-translate-y-full': isScrollingDown, 'translate-y-0': !isScrollingDown }"
+    >
+      <div
+        class="flex items-center px-4 md:px-8 h-16 
+               text-my-orange-normal uppercase tracking-[0.1rem] font-sarpanch"
+      >
+        <!-- DESKTOP LINKS (centered, spaced) -->
+        <ul
+          class="hidden md:flex mx-auto space-x-8
+                 hover:cursor-pointer"
+        >
+          <li class="hover:tracking-[0.3rem] duration-150 hover:text-my-orange-light">
+            about me
+          </li>
+          <li class="hover:tracking-[0.3rem] duration-150 hover:text-my-orange-light">
+            portfolio
+          </li>
+          <li class="hover:tracking-[0.3rem] duration-150 hover:text-my-orange-light">
+            contact
+          </li>
         </ul>
-    </div>
-</template>
-<script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-
-/**
- * Tracks whether we’re scrolling down (hide navbar),
- * and whether we’re near the bottom of the page (show footer).
- */
-const isScrollingDown = ref(false)
-const showFooter = ref(false)
-
-// Keep track of the last scroll position for direction detection
-let lastScrollY = 0
-
-const handleScroll = () => {
-  const currentScrollY = window.scrollY || 0
-
-  // Determine scroll direction
-  isScrollingDown.value = currentScrollY > lastScrollY
-  lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY
-
-  // Check if near bottom of page
-  const buffer = 100 // how close to bottom before showing footer
-  const windowHeight = window.innerHeight
-  const documentHeight = document.body.offsetHeight
-
-  showFooter.value = window.scrollY + windowHeight >= documentHeight - buffer
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
-</script>
+  
+        <!-- MOBILE HAMBURGER / X BUTTON (visible only on mobile) -->
+        <button class="md:hidden focus:outline-none ml-auto" @click="toggleMobileMenu">
+          <!-- If menu is closed, show hamburger; if open, show X -->
+          <span v-if="!mobileMenuOpen">
+            <!-- Three lines icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </span>
+          <span v-else>
+            <!-- X icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+  
+      <!-- MOBILE MENU (slides down under navbar) -->
+      <!-- Only visible if `mobileMenuOpen` is true -->
+      <div v-if="mobileMenuOpen" class="md:hidden bg-my-blue-normal text-my-orange-normal font-sarpanch uppercase tracking-[0.1rem]">
+        <ul class="flex flex-col items-center space-y-8 py-4">
+          <li
+            class="hover:cursor-pointer hover:tracking-[0.3rem] 
+                   duration-150 hover:text-my-orange-light"
+            @click="toggleMobileMenu"
+          >
+            about me
+          </li>
+          <li
+            class="hover:cursor-pointer hover:tracking-[0.3rem] 
+                   duration-150 hover:text-my-orange-light"
+            @click="toggleMobileMenu"
+          >
+            portfolio
+          </li>
+          <li
+            class="hover:cursor-pointer hover:tracking-[0.3rem] 
+                   duration-150 hover:text-my-orange-light"
+            @click="toggleMobileMenu"
+          >
+            contact
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </template>
+  
+  <script setup lang="ts">
+  import { ref, onMounted, onUnmounted } from 'vue'
+  
+  const isScrollingDown = ref(false)
+  let lastScrollY = 0
+  
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY || 0
+    isScrollingDown.value = currentScrollY > lastScrollY
+    lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY
+  }
+  
+  onMounted(() => {
+    window.addEventListener('scroll', handleScroll)
+  })
+  
+  onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll)
+  })
+  
+  const mobileMenuOpen = ref(false)
+  const toggleMobileMenu = () => {
+    mobileMenuOpen.value = !mobileMenuOpen.value
+  }
+  </script>
+  
+  <style scoped>
+  /* Optional: You can add further transition effects for the dropdown. */
+  </style>
+  
