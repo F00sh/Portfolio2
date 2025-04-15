@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+    --color-my-orange-normal: oklch(0.55 0.1653 28.59);
+    --color-my-blue-normal: oklch(0.31 0.0862 240.35);
+    --color-my-blue-dark: oklch(0.25 0.0565 240.35);
+}

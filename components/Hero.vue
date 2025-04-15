@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-800 text-white p-8 flex flex-col items-center justify-center h-screen">
+    <div class="text-white p-8 flex flex-col items-center justify-center h-full">
         Hero
     </div>
 </template>

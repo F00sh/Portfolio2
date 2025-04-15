@@ -1,7 +1,11 @@
 <template>
-    <div class="fixed top-0 left-0 w-full bg-black shadow transition-transform duration-300 ease-in-out"
+    <div class="fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out"
     :class="{ '-translate-y-full': isScrollingDown, 'translate-y-0': !isScrollingDown }">
-        navbar
+        <ul class="flex justify-around items-center text-my-orange-normal p-4 m-auto w-full h-16">
+            <li>about me</li>
+            <li>portfolio</li>
+            <li>contact</li>
+        </ul>
     </div>
 </template>
 <script setup lang="ts">
