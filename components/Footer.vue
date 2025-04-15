@@ -3,7 +3,7 @@
     <footer
       class="fixed bottom-0 left-0 w-full transition-transform duration-300 ease-in-out
              text-center flex items-center justify-center bg-my-orange-normal text-my-blue-normal
-             h-16 md:h-20 text-xl md:text-3xl font-sarpanch uppercase"
+             h-16 md:h-20 text-xl md:text-3xl font-sarpanch uppercase z-50"
       :class="{ 
         'translate-y-0': isAtBottom,
         'translate-y-full': !isAtBottom
