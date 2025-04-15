@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed flex items-center justify-center bottom-0 left-0 w-full h-20 text-center bg-my-blue-normal transition-transform duration-300 ease-in-out"
+    <div class="fixed flex items-center justify-center bottom-0 left-0 w-full h-20 text-center text-3xl font-sarpanch uppercase bg-my-orange-normal text-my-blue-normal transition-transform duration-300 ease-in-out"
     :class="{
       'translate-y-0': isAtBottom,
       'translate-y-full': !isAtBottom

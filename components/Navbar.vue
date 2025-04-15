@@ -66,7 +66,7 @@
   
       <!-- MOBILE MENU (slides down under navbar) -->
       <!-- Only visible if `mobileMenuOpen` is true -->
-      <div v-if="mobileMenuOpen" class="md:hidden bg-my-blue-normal text-my-orange-normal font-sarpanch uppercase tracking-[0.1rem]">
+      <div v-if="mobileMenuOpen" class="md:hidden bg-my-blue-normal text-my-orange-normal font-sarpanch uppercase tracking-[0.1rem] mx-20 py-10 rounded-4xl shadow-lg">
         <ul class="flex flex-col items-center space-y-8 py-4">
           <li
             class="hover:cursor-pointer hover:tracking-[0.3rem] 

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="h-screen flex flex-col justify-between text-white bg-my-blue-dark">
         <Header />
         <Hero />
     </div>
