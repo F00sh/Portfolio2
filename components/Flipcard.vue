@@ -6,14 +6,14 @@
     -->
     <div
       :class="[
-        'relative w-64 h-64 perspective font-oxanium',
+        'relative w-full h-full perspective font-oxanium',
         isMobile ? 'hover:cursor-default' : 'group hover:cursor-pointer'
       ]"
     >
       <!-- The flipping element -->
       <div
         class="relative w-full h-full rounded-xl
-               transition-transform duration-500 [transform-style:preserve-3d]"
+               transition-transform duration-800 [transform-style:preserve-3d]"
         :class="[
           // On desktop, flip on hover
           !isMobile ? 'group-hover:rotate-y-180' : '',
@@ -27,7 +27,7 @@
                  flex items-center justify-center text-my-orange-normal
                  tracking-[0.5rem]"
         >
-          <h2 class="text-8xl font-bold">cvilipić</h2>
+          <h2 class="text-8xl font-bold drop-shadow-lg">cvilipić</h2>
         </div>
   
         <!-- BACK SIDE -->
@@ -36,7 +36,7 @@
                  rotate-y-180 flex items-center justify-center text-my-orange-light
                  tracking-[0.5rem]"
         >
-          <h2 class="text-7xl font-bold text-center">art & design</h2>
+          <h2 class="text-8xl font-bold text-center drop-shadow-lg">art & design</h2>
         </div>
       </div>
     </div>

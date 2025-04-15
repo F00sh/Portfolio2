@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-my-blue-dark">
+  <div class="bg-gradient-to-t from-my-blue-light to-my-blue-dark h-screen">
     <NuxtRouteAnnouncer />
     <NuxtLayout>
     <NuxtPage />

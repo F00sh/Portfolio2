@@ -13,19 +13,19 @@
           class="hidden md:flex mx-auto space-x-8
                  hover:cursor-pointer"
         >
-          <li class="hover:tracking-[0.3rem] duration-150 hover:text-my-orange-light">
+          <li class="hover:tracking-[0.3rem] duration-150 hover:text-my-orange-light drop-shadow-lg">
             about me
           </li>
-          <li class="hover:tracking-[0.3rem] duration-150 hover:text-my-orange-light">
+          <li class="hover:tracking-[0.3rem] duration-150 hover:text-my-orange-light drop-shadow-lg">
             portfolio
           </li>
-          <li class="hover:tracking-[0.3rem] duration-150 hover:text-my-orange-light">
+          <li class="hover:tracking-[0.3rem] duration-150 hover:text-my-orange-light drop-shadow-lg">
             contact
           </li>
         </ul>
   
         <!-- MOBILE HAMBURGER / X BUTTON (visible only on mobile) -->
-        <button class="md:hidden focus:outline-none ml-auto" @click="toggleMobileMenu">
+        <button class="md:hidden focus:outline-none ml-auto mr-5" @click="toggleMobileMenu">
           <!-- If menu is closed, show hamburger; if open, show X -->
           <span v-if="!mobileMenuOpen">
             <!-- Three lines icon -->
@@ -34,7 +34,7 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              class="w-8 h-8"
+              class="w-8 h-8 drop-shadow-lg"
             >
               <path
                 stroke-linecap="round"
@@ -51,7 +51,7 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              class="w-8 h-8"
+              class="w-8 h-8 drop-shadow-lg"
             >
               <path
                 stroke-linecap="round"
@@ -66,25 +66,25 @@
   
       <!-- MOBILE MENU (slides down under navbar) -->
       <!-- Only visible if `mobileMenuOpen` is true -->
-      <div v-if="mobileMenuOpen" class="md:hidden bg-my-blue-normal text-my-orange-normal font-sarpanch uppercase tracking-[0.1rem] mx-20 py-10 rounded-4xl shadow-lg">
+      <div v-if="mobileMenuOpen" class="md:hidden bg-gradient-to-tr from-my-orange-light/70 to-my-orange-dark/50 backdrop-blur-md text-black font-sarpanch uppercase tracking-[0.1rem] mx-20 py-10 rounded-4xl shadow-lg">
         <ul class="flex flex-col items-center space-y-8 py-4">
           <li
             class="hover:cursor-pointer hover:tracking-[0.3rem] 
-                   duration-150 hover:text-my-orange-light"
+                   duration-150 hover:text-my-orange-light drop-shadow-lg"
             @click="toggleMobileMenu"
           >
             about me
           </li>
           <li
             class="hover:cursor-pointer hover:tracking-[0.3rem] 
-                   duration-150 hover:text-my-orange-light"
+                   duration-150 hover:text-my-orange-light drop-shadow-lg"
             @click="toggleMobileMenu"
           >
             portfolio
           </li>
           <li
             class="hover:cursor-pointer hover:tracking-[0.3rem] 
-                   duration-150 hover:text-my-orange-light"
+                   duration-150 hover:text-my-orange-light drop-shadow-lg"
             @click="toggleMobileMenu"
           >
             contact
