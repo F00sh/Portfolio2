@@ -6,7 +6,7 @@
     >
       <div
         class="flex items-center px-4 md:px-8 h-16 
-               text-my-orange-normal uppercase tracking-[0.1rem] font-sarpanch"
+               text-my-orange-light uppercase tracking-[0.1rem] font-sarpanch"
       >
         <!-- DESKTOP LINKS (centered, spaced) -->
         <ul

@@ -24,7 +24,7 @@
         <!-- FRONT SIDE -->
         <div
           class="absolute w-full h-full rounded-xl backface-hidden 
-                 flex items-center justify-center text-my-orange-normal
+                 flex items-center justify-center text-my-orange-light
                  tracking-[0.5rem]"
         >
           <h2 class="text-8xl font-light drop-shadow-xl">cvilipić</h2>
@@ -33,7 +33,7 @@
         <!-- BACK SIDE -->
         <div
           class="absolute w-full h-full rounded-xl backface-hidden 
-                 rotate-y-180 flex items-center justify-center text-my-orange-light
+                 rotate-y-180 flex items-center justify-center text-my-green-light
                  tracking-[0.5rem]"
         >
           <h2 class="text-8xl font-light text-center drop-shadow-xl">art & design</h2>
