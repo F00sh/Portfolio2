@@ -27,7 +27,7 @@
                  flex items-center justify-center text-my-orange-normal
                  tracking-[0.5rem]"
         >
-          <h2 class="text-8xl font-bold drop-shadow-lg">cvilipić</h2>
+          <h2 class="text-8xl font-light drop-shadow-xl">cvilipić</h2>
         </div>
   
         <!-- BACK SIDE -->
@@ -36,7 +36,7 @@
                  rotate-y-180 flex items-center justify-center text-my-orange-light
                  tracking-[0.5rem]"
         >
-          <h2 class="text-8xl font-bold text-center drop-shadow-lg">art & design</h2>
+          <h2 class="text-8xl font-light text-center drop-shadow-xl">art & design</h2>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen flex flex-col justify-between text-white">
+    <div class="bg-gradient-to-t from-my-blue-light to-my-blue-dark h-screen flex flex-col justify-between">
         <Navbar />
         <slot />
         <Footer />
