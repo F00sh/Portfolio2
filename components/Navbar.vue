@@ -1,10 +1,31 @@
 <template>
     <div class="fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out"
     :class="{ '-translate-y-full': isScrollingDown, 'translate-y-0': !isScrollingDown }">
-        <ul class="flex justify-around items-center text-my-orange-normal p-4 m-auto w-full h-16">
-            <li>about me</li>
-            <li>portfolio</li>
-            <li>contact</li>
+        <ul class="flex justify-around items-center text-my-orange-normal uppercase tracking-[0.1rem] p-4 m-auto mt-10 w-full h-16 font-sarpanch">
+            <li class=
+               "absolute lg:left-180 left-10
+                hover:cursor-pointer
+                hover:tracking-[0.3rem]
+                duration-150
+                hover:text-my-orange-light">
+                about me
+            </li>
+            <li class=
+               "absolute
+                hover:cursor-pointer
+                hover:tracking-[0.3rem]
+                duration-150
+                hover:text-my-orange-light">
+                portfolio
+            </li>
+            <li class=
+               "absolute lg:right-180 right-10
+                hover:cursor-pointer
+                hover:tracking-[0.3rem]
+                duration-150
+                hover:text-my-orange-light">
+                contact
+            </li>
         </ul>
     </div>
 </template>

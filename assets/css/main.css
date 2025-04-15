@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Sarpanch:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
     --color-my-orange-normal: oklch(0.55 0.1653 28.59);
+    --color-my-orange-light: oklch(0.71 0.185 28.59);
     --color-my-blue-normal: oklch(0.31 0.0862 240.35);
     --color-my-blue-dark: oklch(0.25 0.0565 240.35);
+    --font-sarpanch: 'Sarpanch', sans-serif;
+    --font-oxanium: 'Oxanium', sans-serif;
 }
