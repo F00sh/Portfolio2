@@ -7,7 +7,7 @@
     <div class="w-full h-4 flex justify-center items-center overflow-hidden">
         <svg
         class="h-5 lg:w-1/4
-                
+                drop-shadow-xl
                 bg-[url('/svg/traka.svg')]
                 bg-repeat-x
                 bg-[length:200%_auto]
@@ -16,7 +16,7 @@
         ></svg>
         <svg
         class="h-5 lg:w-1/4
-                
+                drop-shadow-xl
                 bg-[url('/svg/traka.svg')]
                 bg-repeat-x
                 bg-[length:200%_auto]
