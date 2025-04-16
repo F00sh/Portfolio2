@@ -3,6 +3,9 @@
         <div class="flex flex-col h-1/2 items-center justify-center">
             <Header />
         </div>
+        <div>
+            <MainCarousel />
+        </div>
         <div class="flex flex-col items-center justify-center h-1/2">
             <Hero />
         </div>

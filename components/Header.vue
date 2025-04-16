@@ -4,15 +4,28 @@
     </div>
   
     <!-- SVG with scrolling background repeated 4 times horizontally -->
-    <svg
-      class="h-5 w-full
-            
-             bg-[url('/svg/traka.svg')]
-             bg-repeat-x
-             bg-[length:200%_auto]
-             lg:bg-[length:75%_auto]
-             animate-scrollingBg"
-    ></svg>
+    <div class="w-full h-4 flex justify-center items-center overflow-hidden">
+        <svg
+        class="h-5 lg:w-1/4
+                
+                bg-[url('/svg/traka.svg')]
+                bg-repeat-x
+                bg-[length:200%_auto]
+                lg:bg-[length:200%_auto]
+                animate-scrollingBg"
+        ></svg>
+        <svg
+        class="h-5 lg:w-1/4
+                
+                bg-[url('/svg/traka.svg')]
+                bg-repeat-x
+                bg-[length:200%_auto]
+                lg:bg-[length:200%_auto]
+                animate-scrollingBg"
+        ></svg>
+    </div>
+ 
+   
   </template>
   
   <!-- IMPORTANT: Do NOT use 'scoped' here, or it may break the keyframes -->
