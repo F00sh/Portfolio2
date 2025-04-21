@@ -16,4 +16,9 @@
 
     --font-sarpanch: 'Sarpanch', sans-serif;
     --font-oxanium: 'Oxanium', sans-serif;
+
 }
+
+.snap-smooth-y {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;}

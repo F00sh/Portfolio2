@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-full h-max bottom-0 flex flex-col justify-center items-center px-20">
+    <div class="w-full h-max bottom-0 flex flex-col justify-center items-center px-20 fixed">
       <!-- PHONE BUTTON -->
       <a
         id="call"
