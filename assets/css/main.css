@@ -1,4 +1,8 @@
+/* Importing GSAP animations */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Sarpanch:wght@400;500;600;700;800;900&display=swap');
+
 @import "tailwindcss";
 
 @theme {
@@ -22,3 +26,31 @@
 .snap-smooth-y {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;}
+
+/* ── custom utilities / keyframes ───────────────────────────── */
+  /* 1️⃣  letter‑spacing (quick) */
+  @keyframes spacing {
+    from { letter-spacing: 9rem; }
+    to   { letter-spacing: 0.4rem; }
+  }
+
+  /* 2️⃣  opacity (fade‑in) */
+  @keyframes fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes scale1 {
+    from { transform: scale(0.1); }
+    to   { transform: scale(1); }
+  }
+
+  /* 3️⃣  utility */
+  .animate-reveal {
+    animation:
+      /* spacing: 75 ms, starts immediately */
+      spacing 2000ms ease-out forwards,
+      /* fade: 200 ms, **starts after 1 000 ms delay** */
+      fade 1000ms ease-in-out forwards,
+      scale1 1000ms ease-out forwards;
+  }
