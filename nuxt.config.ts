@@ -2,6 +2,7 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
+  modules: ['motion-v/nuxt'],
   // optional: locks Nuxt (and any hosting presets) to a snapshot of behaviour
   compatibilityDate: '2024-11-01',
 
